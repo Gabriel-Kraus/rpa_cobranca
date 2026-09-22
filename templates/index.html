@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Cobranças - TechSolutions</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+        .card-github {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+        .header-github {
+            background-color: #21262d;
+            border-bottom: 1px solid #30363d;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .form-control-github {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+            border-radius: 6px;
+        }
+        .form-control-github:focus {
+            background-color: #0d1117;
+            border-color: #58a6ff;
+            color: #c9d1d9;
+            box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.3);
+        }
+        .input-group-text-github {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            color: #8b949e;
+        }
+        .btn-github {
+            background-color: #238636;
+            border: 1px solid rgba(240, 246, 252, 0.1);
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            padding: 10px 20px;
+            transition: background-color 0.2s ease;
+        }
+        .btn-github:hover {
+            background-color: #2ea043;
+            color: #ffffff;
+        }
+        .text-muted-github {
+            color: #8b949e !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card card-github">
+                    <!-- Cabeçalho Estilo GitHub -->
+                    <div class="card-header header-github p-4 text-center">
+                        <h3 class="mb-1 text-white"><i class="fa-solid fa-user-plus me-2 text-primary"></i>Cadastro de Faturas & Clientes</h3>
+                        <p class="mb-0 text-muted-github">Portal Web de Cobrança Automática - TechSolutions</p>
+                    </div>
+
+                    <!-- Formulário -->
+                    <div class="card-body p-4 p-md-5">
+                        <form action="/cadastrar" method="POST">
+                            <div class="row g-3">
+                                <!-- Nome -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-white">Nome do Cliente</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text input-group-text-github"><i class="fa-solid fa-user"></i></span>
+                                        <input type="text" class="form-control form-control-github" name="nome" placeholder="Ex: João Silva" required>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-white">E-mail</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text input-group-text-github"><i class="fa-solid fa-envelope"></i></span>
+                                        <input type="email" class="form-control form-control-github" name="email" placeholder="cliente@email.com" required>
+                                    </div>
+                                </div>
+
+                                <!-- Telefone -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-white">Telefone / WhatsApp</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text input-group-text-github"><i class="fa-solid fa-phone"></i></span>
+                                        <input type="text" class="form-control form-control-github" name="telefone" placeholder="(48) 99999-9999" required>
+                                    </div>
+                                </div>
+
+                                <!-- Endereço -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-white">Endereço Completo</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text input-group-text-github"><i class="fa-solid fa-location-dot"></i></span>
+                                        <input type="text" class="form-control form-control-github" name="endereco" placeholder="Rua, Número, Bairro" required>
+                                    </div>
+                                </div>
+
+                                <!-- Valor -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-white">Valor da Fatura (R$)</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text input-group-text-github">R$</span>
+                                        <input type="number" step="0.01" class="form-control form-control-github" name="valor" placeholder="150.00" required>
+                                    </div>
+                                </div>
+
+                                <!-- Vencimento -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-white">Data de Vencimento</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text input-group-text-github"><i class="fa-solid fa-calendar-days"></i></span>
+                                        <input type="text" class="form-control form-control-github" name="vencimento" placeholder="DD/MM/AAAA" required>
+                                    </div>
+                                </div>
+
+                                <!-- Botão de Envio (Estilo botão Commit/PR do GitHub) -->
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" id="btn-cadastrar" class="btn btn-github btn-lg w-100">
+                                        <i class="fa-solid fa-check-circle me-2"></i>Cadastrar Fatura
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Rodapé -->
+                    <div class="card-footer text-center bg-transparent border-top border-secondary pb-3 text-muted-github small">
+                        <i class="fa-solid fa-robot me-1"></i> Formúlário otimizado para integração RPA Selenium
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></script>
+</body>
+</html>
