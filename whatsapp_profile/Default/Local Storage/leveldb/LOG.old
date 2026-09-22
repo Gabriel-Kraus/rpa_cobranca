@@ -1,9 +1,0 @@
-2026/09/18-09:12:20.122 4f28 Reusing MANIFEST C:\Users\Usuario\Documents\rpa_cobranca\whatsapp_profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/09/18-09:12:20.124 4f28 Recovering log #17
-2026/09/18-09:12:20.128 4f28 Reusing old log C:\Users\Usuario\Documents\rpa_cobranca\whatsapp_profile\Default\Local Storage\leveldb/000017.log 
-2026/09/18-09:13:11.510 3a8c Level-0 table #22: started
-2026/09/18-09:13:11.538 3a8c Level-0 table #22: 16162 bytes OK
-2026/09/18-09:13:11.541 3a8c Delete type=0 #17
-2026/09/18-09:15:27.059 3a8c Level-0 table #24: started
-2026/09/18-09:15:27.062 3a8c Level-0 table #24: 13945 bytes OK
-2026/09/18-09:15:27.064 3a8c Delete type=0 #21
